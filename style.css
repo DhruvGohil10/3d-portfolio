@@ -1,0 +1,247 @@
+/* this import is for glitch text effect */
+@import url('https://fonts.googleapis.com/css2?family=Fascinate+Inline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+body {
+	overflow-x: hidden;
+}
+
+canvas {
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+:root {
+	--dark-bg: rgba(15, 15, 15, 0.95);
+	--spacing: 150px;
+}
+
+main {
+	width: 100vw;
+	color: white;
+	z-index: 99;
+	position: absolute;
+	width: 100%;
+	margin: 0px auto;
+	padding: 120px 0px;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+}
+
+h1,
+h2,
+h3,
+blockquote {
+	/* font-family: elevon, sans-serif; */
+	font-weight: 700;
+	font-style: normal;
+}
+
+header {
+	/* background: var(--dark-bg); */
+	grid-column: 2 / span 5;
+	font-size: 2.5rem;
+	/* padding: 2rem; */
+	padding: 0 2rem 2rem 2rem;
+	margin-bottom: var(--spacing);
+}
+
+section {
+	grid-column: 2 / 8;
+	/* background: var(--dark-bg); */
+	/* margin-bottom: var(--spacing); */
+}
+
+.glass {
+	background: rgba(0, 0, 0, 0.43);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(5.9px);
+	-webkit-backdrop-filter: blur(5.9px);
+}
+
+.about-me{
+	padding: .1rem 1rem 1rem;
+}
+
+.heading-font {
+	font-size: 2.5rem;
+	font-family: 'Fascinate Inline', cursive;
+	/* padding: 1rem */
+}
+
+.para-text {
+	font-family: 'Poppins', sans-serif;
+	font-size: 1.5rem;
+	font-weight: 500;
+}
+
+blockquote p {
+	color: black;
+	background-color: white;
+	font-size: 4rem;
+	display: inline;
+	line-height: 1;
+}
+
+.left {
+	grid-column: 6 / 12;
+}
+
+
+/* projects ============================ */
+.project-title-box{
+	width: 700px;
+	margin: 4rem 3rem 2rem 0;
+	padding: .001rem 0 .1rem 1rem;
+}
+
+.project-title-box h2{
+	padding: 0;
+}
+
+.project-cards-container{
+	/* width: 100%; */
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1.4rem 2rem;
+	/* place-items: center; */
+}
+
+.project-card{
+	width: 500px;
+	height: 300px;
+	position: relative;
+}
+
+.project-img{
+	height: 90%;
+	width: 95%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 7px;
+}
+
+.android-title-box{
+	width:800px;
+}
+
+.android-card{
+	width: 280px !important;
+	height: 450px !important;
+}
+
+.spline{
+	margin-top: 2rem;
+	width: 800px;
+	height: 400px;
+	background-color: transparent;
+}
+
+/* contact ============================ */
+.contact-card{
+	width: 550px;
+	padding: 0 0 1rem 1rem;
+}
+
+.contact-card h2{
+	padding-top: 10px;
+}
+
+.contact-me-link{
+	font-family: 'Poppins', sans-serif;
+	font-size: 1.5rem;
+	font-weight: 500;
+	color: rgb(65, 23, 255);	
+}
+
+/* mobile ============================ */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 400px) {
+	main {
+		padding: 0px 0px;
+	}
+
+	header {
+		grid-column: 1 / span 12;
+		font-size: 2rem;
+		padding: 0 2rem 0rem 0rem;
+	}
+
+	section {
+		grid-column: 1 / 12;
+		/* background: var(--dark-bg); */
+		/* margin-bottom: var(--spacing); */
+	}
+
+	.project-title-box{
+		width: 350px;
+		margin: 4rem 0rem 1rem 0;
+		padding: .001rem 0 .1rem 1rem;
+	}
+
+	.heading-font {
+		font-size: 1.9rem;
+	}
+	
+	.para-text {
+		font-size: 1.3rem;
+		font-weight: 500;
+	}
+	
+	.project-cards-container{
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 1rem 1rem;
+	}
+
+	.contact-card{
+		width: 370px;
+	}
+
+}
+
+@media (min-width: 481px) and (max-width: 1000px) {
+	main {
+		padding: 0px 0px;
+	}
+
+	header {
+		grid-column: 1 / span 12;
+		font-size: 2rem;
+		padding: 0 2rem 0rem 0rem;
+	}
+
+	section {
+		grid-column: 1 / 12;
+	}
+
+	.project-title-box{
+		width: 350px;
+		margin: 4rem 0rem 1rem 0;
+		padding: .001rem 0 .1rem 1rem;
+	}
+
+	.heading-font {
+		font-size: 1.9rem;
+	}
+	
+	.para-text {
+		font-size: 1.3rem;
+		font-weight: 500;
+	}
+	
+	.project-cards-container{
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 1rem 1rem;
+	}
+
+	.contact-card{
+		width: 370px;
+	}
+
+}
